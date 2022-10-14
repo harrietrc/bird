@@ -1,4 +1,10 @@
-var game = {
+import {GameOverScreen} from "./screens/gameover";
+import {PlayScreen} from "./screens/play";
+import {TitleScreen} from "./screens/title";
+import {BirdEntity, Ground, HitEntity, PipeEntity, PipeGenerator} from "./entities/entities";
+import {HUD} from "./entities/HUD";
+
+window.game = {
     data: {
         score : 0,
         steps: 0,
@@ -57,5 +63,15 @@ var game = {
         me.pool.register("ground", game.Ground, true);
 
         me.state.change(me.state.MENU);
-    }
+    },
+
+    GameOverScreen,
+    PlayScreen,
+    TitleScreen,
+    HUD,
+    BirdEntity,
+    PipeEntity,
+    PipeGenerator,
+    HitEntity,
+    Ground,
 };

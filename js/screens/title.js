@@ -1,4 +1,6 @@
-game.TitleScreen = me.ScreenObject.extend({
+import {BackgroundLayer} from "../entities/HUD";
+
+export const TitleScreen = me.ScreenObject.extend({
     init: function(){
         this._super(me.ScreenObject, 'init');
         this.font = null;

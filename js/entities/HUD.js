@@ -1,6 +1,4 @@
-game.HUD = game.HUD || {};
-
-game.HUD.Container = me.Container.extend({
+const Container = me.Container.extend({
     init: function() {
         this._super(me.Container, 'init');
         // persistent across level change
@@ -21,7 +19,7 @@ game.HUD.Container = me.Container.extend({
 });
 
 
-game.HUD.ScoreItem = me.Renderable.extend({
+const ScoreItem = me.Renderable.extend({
     init: function(x, y) {
         this._super(me.Renderable, "init", [x, y, 10, 10]);
 
@@ -39,7 +37,7 @@ game.HUD.ScoreItem = me.Renderable.extend({
 
 });
 
-var BackgroundLayer = me.ImageLayer.extend({
+export const BackgroundLayer = me.ImageLayer.extend({
     init: function(image, z, speed) {
         var settings = {};
         settings.name = image;
@@ -64,3 +62,8 @@ var BackgroundLayer = me.ImageLayer.extend({
         return true;
     }
 });
+
+export const HUD = {
+    Container,
+    ScoreItem,
+}

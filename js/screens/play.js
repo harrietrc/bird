@@ -1,4 +1,6 @@
-game.PlayScreen = me.ScreenObject.extend({
+import {BackgroundLayer} from "../entities/HUD";
+
+export const PlayScreen = me.ScreenObject.extend({
     init: function() {
         me.audio.play("theme", true);
         // lower audio volume on firefox browser

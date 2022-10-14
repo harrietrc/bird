@@ -1,4 +1,4 @@
-game.BirdEntity = me.Entity.extend({
+export const BirdEntity = me.Entity.extend({
     init: function(x, y) {
         var settings = {};
         settings.image = 'clumsy';
@@ -117,7 +117,7 @@ game.BirdEntity = me.Entity.extend({
 });
 
 
-game.PipeEntity = me.Entity.extend({
+export const PipeEntity = me.Entity.extend({
     init: function(x, y) {
         var settings = {};
         settings.image = this.image = me.loader.getImage('pipe');
@@ -149,7 +149,7 @@ game.PipeEntity = me.Entity.extend({
 
 });
 
-game.PipeGenerator = me.Renderable.extend({
+export const PipeGenerator = me.Renderable.extend({
     init: function() {
         this._super(me.Renderable, 'init', [0, me.game.viewport.width, me.game.viewport.height, 92]);
         this.alwaysUpdate = true;
@@ -179,8 +179,7 @@ game.PipeGenerator = me.Renderable.extend({
     },
 
 });
-
-game.HitEntity = me.Entity.extend({
+export const HitEntity = me.Entity.extend({
     init: function(x, y) {
         var settings = {};
         settings.image = this.image = me.loader.getImage('hit');
@@ -213,7 +212,7 @@ game.HitEntity = me.Entity.extend({
 
 });
 
-game.Ground = me.Entity.extend({
+export const Ground = me.Entity.extend({
     init: function(x, y) {
         var settings = {};
         settings.image = me.loader.getImage('ground');

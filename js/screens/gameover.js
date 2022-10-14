@@ -1,4 +1,6 @@
-game.GameOverScreen = me.ScreenObject.extend({
+import {BackgroundLayer} from "../entities/HUD";
+
+export const GameOverScreen = me.ScreenObject.extend({
     init: function() {
         this.savedData = null;
         this.handler = null;
